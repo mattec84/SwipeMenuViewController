@@ -1,5 +1,5 @@
 import UIKit
-import ECSwipeMenuViewController
+import ENGCENSwipeMenuViewController
 
 final class ViewController: SwipeMenuViewController {
 
