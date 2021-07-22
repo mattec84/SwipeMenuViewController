@@ -13,8 +13,8 @@
 		989A0B9F1F9C2F780062AB1B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A0B9E1F9C2F780062AB1B /* UIViewExtension.swift */; };
 		98B984871F15C57800FCDD0B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B984861F15C57800FCDD0B /* UIViewExtension.swift */; };
 		98B984891F15CAEB00FCDD0B /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B984881F15CAEB00FCDD0B /* PopupViewController.swift */; };
-		98D59CA01F09E2150028EAEA /* SwipeMenuViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98EEED431EFA627000A149EB /* SwipeMenuViewController.framework */; };
-		98D59CA11F09E2150028EAEA /* SwipeMenuViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98EEED431EFA627000A149EB /* SwipeMenuViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		98D59CA01F09E2150028EAEA /* ECSwipeMenuViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98EEED431EFA627000A149EB /* ECSwipeMenuViewController.framework */; };
+		98D59CA11F09E2150028EAEA /* ECSwipeMenuViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98EEED431EFA627000A149EB /* ECSwipeMenuViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98E73FB81F0B95DD0063DF18 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73FB71F0B95DD0063DF18 /* ContentViewController.swift */; };
 		98E73FC11F0E1D230063DF18 /* ContentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73FC01F0E1D230063DF18 /* ContentScrollView.swift */; };
 		98EEED481EFA627000A149EB /* SwipeMenuViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 98EEED461EFA627000A149EB /* SwipeMenuViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,7 +45,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				98D59CA11F09E2150028EAEA /* SwipeMenuViewController.framework in Embed Frameworks */,
+				98D59CA11F09E2150028EAEA /* ECSwipeMenuViewController.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,7 +62,7 @@
 		98B984881F15CAEB00FCDD0B /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		98E73FB71F0B95DD0063DF18 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		98E73FC01F0E1D230063DF18 /* ContentScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentScrollView.swift; sourceTree = "<group>"; };
-		98EEED431EFA627000A149EB /* SwipeMenuViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipeMenuViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98EEED431EFA627000A149EB /* ECSwipeMenuViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ECSwipeMenuViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98EEED461EFA627000A149EB /* SwipeMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipeMenuViewController.h; sourceTree = "<group>"; };
 		98EEED471EFA627000A149EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98EEED531EFA62D900A149EB /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98D59CA01F09E2150028EAEA /* SwipeMenuViewController.framework in Frameworks */,
+				98D59CA01F09E2150028EAEA /* ECSwipeMenuViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +123,7 @@
 		98EEED441EFA627000A149EB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				98EEED431EFA627000A149EB /* SwipeMenuViewController.framework */,
+				98EEED431EFA627000A149EB /* ECSwipeMenuViewController.framework */,
 				98EEED531EFA62D900A149EB /* Example.app */,
 			);
 			name = Products;
@@ -191,7 +191,7 @@
 			);
 			name = SwipeMenuViewController;
 			productName = SwipeMenuViewController;
-			productReference = 98EEED431EFA627000A149EB /* SwipeMenuViewController.framework */;
+			productReference = 98EEED431EFA627000A149EB /* ECSwipeMenuViewController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		98EEED521EFA62D900A149EB /* Example */ = {
@@ -470,7 +470,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.yysskk.SwipeMenuViewController;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "EC$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -494,7 +495,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.yysskk.SwipeMenuViewController;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "EC$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;

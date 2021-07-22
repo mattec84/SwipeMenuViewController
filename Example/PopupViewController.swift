@@ -1,5 +1,5 @@
 import UIKit
-import SwipeMenuViewController
+import ECSwipeMenuViewController
 
 class PopupViewController: UIViewController {
 
